@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.eazybytes.loans.LoansApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.35 s <<< FAILURE! -- in com.eazybytes.loans.LoansApplicationTests
+com.eazybytes.loans.LoansApplicationTests.contextLoads -- Time elapsed: 0.065 s <<< ERROR!
+java.lang.NoSuchMethodError: 'io.opentelemetry.api.logs.LogRecordBuilder io.opentelemetry.api.logs.LogRecordBuilder.setException(java.lang.Throwable)'
+	at io.opentelemetry.instrumentation.logback.appender.v1_0.internal.LoggingEventMapper.mapLoggingEvent(LoggingEventMapper.java:149)
+	at io.opentelemetry.instrumentation.logback.appender.v1_0.internal.LoggingEventMapper.emit(LoggingEventMapper.java:112)
+	at io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender.emit(OpenTelemetryAppender.java:767)
+	at io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender.append(OpenTelemetryAppender.java:280)
+	at io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender.append(OpenTelemetryAppender.java:35)
+	at ch.qos.logback.core.UnsynchronizedAppenderBase.doAppend(UnsynchronizedAppenderBase.java:81)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.log(Logger.java:805)
+	at org.apache.commons.logging.impl.Slf4jLogFactory$Slf4jLocationAwareLog.log(Slf4jLogFactory.java:126)
+	at org.apache.commons.logging.impl.Slf4jLogFactory$Slf4jLocationAwareLog.warn(Slf4jLogFactory.java:146)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:272)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:203)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
